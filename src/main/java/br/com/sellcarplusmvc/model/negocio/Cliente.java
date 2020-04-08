@@ -10,6 +10,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 @Entity
 @Table(name = "T_cliente")
 public class Cliente {
@@ -23,6 +25,7 @@ public class Cliente {
 	private String cpf;
 
 	@Temporal(TemporalType.DATE)
+	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	private Date dataNascimento;
 
 	public String getNome() {
@@ -56,5 +59,12 @@ public class Cliente {
 	public void setId(Long id) {
 		this.id = id;
 	}
+
+	@Override
+	public String toString() {
+		return "" + nome + ", CPF = " + cpf + ", Data de Nascimento = " + dataNascimento;
+	}
+	
+	
 
 }
