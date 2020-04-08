@@ -35,11 +35,11 @@
 			<button type="button"
 				class="list-group-item list-group-item-action active" disabled>Veículos</button>
 
-			<a href="/veiculo/carro"
-				class="ist-group-item list-group-item-action">carros</a> 
-			<a href="/veiculo/moto" 
+			<a href="/veiculo/carros"
+				class="ist-group-item list-group-item-action">Carros</a> 
+			<a href="/veiculo/motos" 
 				class="ist-group-item list-group-item-action">Motos</a>
-			<a href="/veiculo/caminhao"
+			<a href="/veiculo/caminhoes"
 				class="ist-group-item list-group-item-action">Caminhões</a>
 		</div>
 	</div>
