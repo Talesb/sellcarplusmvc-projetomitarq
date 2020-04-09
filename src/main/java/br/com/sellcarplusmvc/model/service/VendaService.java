@@ -52,11 +52,13 @@ public class VendaService {
 			throw new Exception("Cliente não encontrado");
 		}
 
+		Venda novaVenda = Venda.fromDTO(vendaDTO);
 		List<Veiculo> veiculos = new ArrayList<Veiculo>();
 
 		vendaDTO.getVeiculoIds().forEach(id -> {
 			Veiculo veiculoEncontrado = this.veiculoService.findById(id);
 			if (veiculoEncontrado != null) {
+				novaVenda.setValorTotal(veiculoEncontrado.getPreco() + novaVenda.getValorTotal());
 				veiculos.add(veiculoEncontrado);
 			}
 		});
@@ -66,16 +68,25 @@ public class VendaService {
 
 		}
 
-		Venda novaVenda = Venda.fromDTO(vendaDTO);
 		novaVenda.setCliente(clienteVenda);
 		novaVenda.setVeiculos(veiculos);
+
+		if (novaVenda.getPorcentagemDesconto() > 0 && novaVenda.getValorTotal() > 0) {
+			double valorTotalComDesconto = (novaVenda.getValorTotal()
+					- ((novaVenda.getValorTotal() * novaVenda.getPorcentagemDesconto()) / 100));
+
+			novaVenda.setValorTotal(valorTotalComDesconto);
+		}
 
 		this.vendaRepository.save(novaVenda);
 
 		veiculos.forEach(veiculo -> {
 			veiculo.setVenda(novaVenda);
+			veiculo.setVendido(true);
 			this.veiculoService.save(veiculo);
 		});
+		
+		System.out.println(novaVenda.getVeiculos());
 	}
 
 }

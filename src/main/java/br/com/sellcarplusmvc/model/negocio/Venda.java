@@ -102,8 +102,16 @@ public class Venda {
 		Venda venda = new Venda();
 		venda.setDataRetirada(dto.getDataRetirada());
 		venda.setPorcentagemDesconto(dto.getPorcentagemDesconto());
-		venda.setValorTotal(dto.getValorTotal());
 		return venda;
 	}
+
+	@Override
+	public String toString() {
+		return "Venda [id=" + id + ", dataRetirada=" + dataRetirada + ", valorTotal=" + valorTotal
+				+ ", porcentagemDesconto=" + porcentagemDesconto + ", cliente=" + cliente + ", veiculos=" + veiculos
+				+ "]";
+	}
+	
+	
 
 }

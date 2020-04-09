@@ -10,10 +10,9 @@ public class VendaDTO implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
+
 	private int id;
 	private Date dataRetirada;
-	private double valorTotal;
 	private double porcentagemDesconto;
 	private int clienteId;
 	private List<Integer> veiculoIds;
@@ -32,14 +31,6 @@ public class VendaDTO implements Serializable {
 
 	public void setDataRetirada(Date dataRetirada) {
 		this.dataRetirada = dataRetirada;
-	}
-
-	public double getValorTotal() {
-		return valorTotal;
-	}
-
-	public void setValorTotal(double valorTotal) {
-		this.valorTotal = valorTotal;
 	}
 
 	public double getPorcentagemDesconto() {

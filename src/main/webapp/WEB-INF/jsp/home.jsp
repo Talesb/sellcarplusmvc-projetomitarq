@@ -27,7 +27,7 @@
 		</div>
 
 		<div class="list-group">
-			<a href="/venda"
+			<a href="/vendas"
 				class="list-group-item list-group-item-action list-group-item-light">Venda</a>
 			<a href="/clientes"
 				class="list-group-item list-group-item-action list-group-item-light">Cliente</a>

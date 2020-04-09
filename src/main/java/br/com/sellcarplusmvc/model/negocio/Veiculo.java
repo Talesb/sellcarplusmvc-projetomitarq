@@ -111,7 +111,7 @@ public class Veiculo {
 	@Override
 	public String toString() {
 		return "Veiculo [id=" + id + ", ano=" + ano + ", nome=" + nome + ", cor=" + cor + ", potencia=" + potencia
-				+ ", preco=" + preco + ", marca=" + marca + ", vendido=" + vendido + ", venda=" + venda + "]";
+				+ ", preco=" + preco + ", marca=" + marca + ", vendido=" + vendido;
 	}
 	
 	
