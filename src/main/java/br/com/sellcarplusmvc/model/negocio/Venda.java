@@ -100,8 +100,13 @@ public class Venda {
 
 	public static Venda fromDTO(VendaDTO dto) {
 		Venda venda = new Venda();
-		venda.setDataRetirada(dto.getDataRetirada());
-		venda.setPorcentagemDesconto(dto.getPorcentagemDesconto());
+		if (dto.getDataRetirada() != null) {
+			venda.setDataRetirada(dto.getDataRetirada());
+		}
+		if (dto.getPorcentagemDesconto() != null) {
+			venda.setPorcentagemDesconto(dto.getPorcentagemDesconto());
+		}
+
 		return venda;
 	}
 
@@ -111,7 +116,5 @@ public class Venda {
 				+ ", porcentagemDesconto=" + porcentagemDesconto + ", cliente=" + cliente + ", veiculos=" + veiculos
 				+ "]";
 	}
-	
-	
 
 }

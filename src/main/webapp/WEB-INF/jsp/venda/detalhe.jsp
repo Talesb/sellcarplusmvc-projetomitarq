@@ -21,10 +21,12 @@
 
 <body>
 	<div class="container-fluid">
+		<a href="/vendas" class="btn btn-light mb-2"> Voltar</a>
 		<form action="/venda" method="post">
 			<div class="form-group">
 				<label for="exampleFormControlSelect1">Cliente:</label> <select
-					class="form-control" id="exampleFormControlSelect1" name="clienteId">
+					class="form-control" id="exampleFormControlSelect1"
+					name="clienteId">
 					<c:forEach var="item" items="${clientes}">
 						<option value="${item.id}">${item.nome}</option>
 					</c:forEach>
@@ -41,16 +43,31 @@
 					name="dataRetirada" id="dataRetirada">
 			</div>
 
-			<div class="form-check">
-					<c:forEach var="veiculo" items="${veiculos}">
-				<input class="form-check-input" type="checkbox" name="veiculoIds" value="${veiculo.id}"
-					id="defaultCheck_${veiculo.id}"> 
-				<label class="form-check-label"
-					for="defaultCheck_${veiculo.id}"> ${veiculo.nome}</label>
-					</c:forEach>
-			</div>
 
-			<button type="submit" class="btn btn-primary">Cadastrar</button>
+
+			<ul class="list-group">
+				<c:forEach var="veiculo" items="${veiculos}">
+					<li class="list-group-item">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" name="veiculoIds"
+								value="${veiculo.id}" id="defaultCheck_${veiculo.id}"> <label
+								class="form-check-label" for="defaultCheck_${veiculo.id}">
+								${veiculo.nome}</label>
+						</div>
+					</li>
+				</c:forEach>
+			</ul>
+
+			<!-- 			<div class="form-check"> -->
+			<%-- 					<c:forEach var="veiculo" items="${veiculos}"> --%>
+			<%-- 				<input class="form-check-input" type="checkbox" name="veiculoIds" value="${veiculo.id}" --%>
+			<%-- 					id="defaultCheck_${veiculo.id}">  --%>
+			<!-- 				<label class="form-check-label" -->
+			<%-- 					for="defaultCheck_${veiculo.id}"> ${veiculo.nome}</label> --%>
+			<%-- 					</c:forEach> --%>
+
+
+			<button type="submit" class="btn btn-primary mt-2">Cadastrar</button>
 		</form>
 	</div>
 	<!-- Optional JavaScript -->

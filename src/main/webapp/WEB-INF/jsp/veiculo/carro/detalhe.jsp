@@ -21,16 +21,16 @@
 
 <body>
 	<div class="container-fluid">
+		<a href="/veiculo/carros" class="btn btn-light mb-2"> Voltar</a>
 		<form action="/veiculo/carro" method="post">
-
-			<div class="form-group">
-				<label for="exampleInputEmail1">Ano</label> <input type="number"
-					class="form-control" id="ano" name="ano"
-					aria-describedby="emailHelp">
-			</div>
 			<div class="form-group">
 				<label for="exampleInputEmail1">Nome</label> <input type="text"
 					class="form-control" id="nome" name="nome"
+					aria-describedby="emailHelp">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputEmail1">Ano</label> <input type="number"
+					class="form-control" id="ano" name="ano"
 					aria-describedby="emailHelp">
 			</div>
 			<div class="form-group">
@@ -59,14 +59,14 @@
 					aria-describedby="emailHelp">
 			</div>
 			<div class="form-group">
-				<label for="exampleInputEmail1">Quantidade de assento</label> <input type="number"
-					class="form-control" id="qtdAssento" name="qtdAssento"
-					aria-describedby="emailHelp">
+				<label for="exampleInputEmail1">Quantidade de assento</label> <input
+					type="number" class="form-control" id="qtdAssento"
+					name="qtdAssento" aria-describedby="emailHelp">
 			</div>
 			<div class="form-group">
 				<label for="exampleInputEmail1">Quantidade de porta</label> <input
-					type="number" class="form-control" id="qtdPorta"
-					name="qtdPorta" aria-describedby="emailHelp">
+					type="number" class="form-control" id="qtdPorta" name="qtdPorta"
+					aria-describedby="emailHelp">
 			</div>
 
 

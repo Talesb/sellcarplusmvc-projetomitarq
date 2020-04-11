@@ -25,22 +25,21 @@
 				content or information.</p>
 			<hr class="my-4">
 		</div>
-
 		<div class="list-group">
 			<a href="/vendas"
-				class="list-group-item list-group-item-action list-group-item-light">Venda</a>
+				class="list-group-item list-group-item-action list-group-item-light text-center">Vendas</a>
 			<a href="/clientes"
-				class="list-group-item list-group-item-action list-group-item-light">Cliente</a>
-
-			<button type="button"
-				class="list-group-item list-group-item-action active" disabled>Veículos</button>
-
-			<a href="/veiculo/carros"
-				class="ist-group-item list-group-item-action">Carros</a> 
-			<a href="/veiculo/motos" 
-				class="ist-group-item list-group-item-action">Motos</a>
-			<a href="/veiculo/caminhoes"
-				class="ist-group-item list-group-item-action">Caminhões</a>
+				class="list-group-item list-group-item-action list-group-item-light text-center">Clientes</a>
+			<button class="btn btn-light" type="button" data-toggle="collapse"
+				data-target="#collapseExample" aria-expanded="false"
+				aria-controls="collapseExample" style="color: #818182;"">Veículos</button>
+			<div class="collapse list-group" id="collapseExample">
+				<a href="/veiculo/carros"
+					class="ist-group-item list-group-item-action text-center"">Carros</a> <a
+					href="/veiculo/motos" class="ist-group-item list-group-item-action text-center"">Motos</a>
+				<a href="/veiculo/caminhoes"
+					class="ist-group-item list-group-item-action text-center"">Caminhões</a>
+			</div>
 		</div>
 	</div>
 	<!-- Optional JavaScript -->

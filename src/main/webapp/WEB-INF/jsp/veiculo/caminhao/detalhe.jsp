@@ -21,16 +21,16 @@
 
 <body>
 	<div class="container-fluid">
+		<a href="/veiculo/caminhoes" class="btn btn-light mb-2"> Voltar</a>
 		<form action="/veiculo/caminhao" method="post">
-
-			<div class="form-group">
-				<label for="exampleInputEmail1">Ano</label> <input type="number"
-					class="form-control" id="ano" name="ano"
-					aria-describedby="emailHelp">
-			</div>
 			<div class="form-group">
 				<label for="exampleInputEmail1">Nome</label> <input type="text"
 					class="form-control" id="nome" name="nome"
+					aria-describedby="emailHelp">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputEmail1">Ano</label> <input type="number"
+					class="form-control" id="ano" name="ano"
 					aria-describedby="emailHelp">
 			</div>
 			<div class="form-group">

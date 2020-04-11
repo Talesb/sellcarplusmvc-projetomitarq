@@ -13,7 +13,7 @@ public class VendaDTO implements Serializable {
 
 	private int id;
 	private Date dataRetirada;
-	private double porcentagemDesconto;
+	private Double porcentagemDesconto;
 	private int clienteId;
 	private List<Integer> veiculoIds;
 
@@ -33,11 +33,11 @@ public class VendaDTO implements Serializable {
 		this.dataRetirada = dataRetirada;
 	}
 
-	public double getPorcentagemDesconto() {
+	public Double getPorcentagemDesconto() {
 		return porcentagemDesconto;
 	}
 
-	public void setPorcentagemDesconto(double porcentagemDesconto) {
+	public void setPorcentagemDesconto(Double porcentagemDesconto) {
 		this.porcentagemDesconto = porcentagemDesconto;
 	}
 
